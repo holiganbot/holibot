@@ -25,8 +25,11 @@ const Sidebar = ({ onClose }: SidebarProps) => {
       subItems: [
         { name: 'İndirme', href: '/installation#indirme', icon: '💾', parent: '/installation' },
         { name: 'Kurulum', href: '/installation#kurulum', icon: '🔧', parent: '/installation' },
-        { name: 'SMS Uygulaması Entegrasyonu', href: '/installation#yapilandirma', icon: '📱', parent: '/installation' },
+        { name: 'SMS Entegrasyonu', href: '/sms-integration', icon: '📱', parent: '/installation' },
+        { name: 'Gmail Uygulama Şifresi', href: '/installation#gmailAppPassword', icon: '📧', parent: '/installation' },
         { name: 'Başlatma', href: '/installation#baslatma', icon: '▶️', parent: '/installation' },
+        { name: 'Android Kurulum', href: '/android-setup', icon: '🤖', parent: '/sms-integration' },
+        { name: 'iPhone Kurulum', href: '/iphone-setup', icon: '📱', parent: '/sms-integration' },
       ]
     },
     {

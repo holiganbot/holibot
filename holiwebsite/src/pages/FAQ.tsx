@@ -14,43 +14,32 @@ const FAQ = () => {
   const faqItems = [
     {
       question: "Bot nasıl kurulur?",
-      answer: "Kurulum bölümünden adım adım talimatları takip edebilirsiniz. npm ile paket indirip, yapılandırma dosyasını oluşturduktan sonra npm start komutuyla başlatabilirsiniz."
+      answer: "Eğer sunucu desteği alırsanız tek yapmanız gereken kurulum SMS Entegrasyonunu yapmak. Geri kalan kurulumları biz sizin yerinize yapıyoruz."
     },
     {
-      question: "Bot hangi platformlarda çalışır?",
-      answer: "Botumuz Discord, Telegram, WhatsApp ve diğer popüler mesajlaşma platformlarında çalışabilir. Ayrıca web API'si üzerinden de erişilebilir."
+      question: "Şifremi size mi vereceğim?",
+      answer: "Eğer kendi bilgisayarınızda kurulum yaparsanız şifrenizi bize vermenize gerek kalmadan kurabilirsiniz. Sunucu desteği alırsanız ise sunucu bağlantı bilgileri size verilecek ve şifrenizi yine siz girerek botu başlatacaksınız"
+    },
+    {
+      question: "Bot çalışırken hesabıma girersem ne olur?",
+      answer: "Bot çalışırken hesaba giriş yaparsanız bot bir dahaki giriş yapma süresine kadar çalışmaz. Daha sonra tekrar giriş yapacağı için bir problem olmadan devam eder"
     },
     {
       question: "Bot ücretsiz mi?",
-      answer: "Bot temel özelliklerle ücretsiz olarak kullanılabilir. Premium özellikler için aylık abonelik planları mevcuttur."
+      answer: "Bot ücreti aylık lisanslama ücreti ile sunulmaktadır. Ekstra olarak sunucu desteği için ekstra ücret alınmaktadır."
     },
+    
     {
       question: "Teknik destek nasıl alabilirim?",
-      answer: "İletişim sayfasından bizimle iletişime geçebilir, GitHub issues üzerinden sorun bildirebilir veya Discord sunucumuza katılabilirsiniz."
+      answer: "İletişim sayfasından bizimle Telegram, Discord veya E-posta ile iletişime geçebilirsiniz."
     },
     {
-      question: "Bot verilerimi güvende tutar mı?",
-      answer: "Evet, tüm veriler şifreli olarak saklanır ve GDPR standartlarına uygun şekilde işlenir. Verileriniz hiçbir üçüncü tarafla paylaşılmaz."
-    },
-    {
-      question: "Özel komutlar oluşturabilir miyim?",
-      answer: "Evet, yapılandırma bölümünde anlatıldığı gibi özel komutlar oluşturabilir ve mevcut komutları düzenleyebilirsiniz."
-    },
-    {
-      question: "Bot çökerse ne yapmalıyım?",
-      answer: "Sorun Giderme bölümünde çözüm önerileri bulabilirsiniz. Sorun devam ederse log dosyalarını bizimle paylaşın."
-    },
-    {
-      question: "Hangi Node.js versiyonu gerekli?",
-      answer: "Bot Node.js 16 veya daha yeni versiyonlarda çalışır. En iyi performans için Node.js 18+ önerilir."
-    },
-    {
-      question: "Database kurulumu gerekli mi?",
-      answer: "Temel özellikler için database gerekmez. Ancak kullanıcı verilerini saklamak için PostgreSQL veya MongoDB kullanabilirsiniz."
+      question: "Özel oran alındığında bildirim alabilir miyim?",
+      answer: "Evet, özel oran alındığında e-posta adresinize bildirim gönderilir."
     },
     {
       question: "Bot güncellemeleri otomatik mi?",
-      answer: "Bot güncellemeleri manuel olarak yapılır. Yeni versiyonlar çıktığında size bildirilir ve güncelleme talimatları paylaşılır."
+      answer: "Hayır, bot güncellemeleri manuel olarak yapılır. Yeni versiyonlar çıktığında size bildirilir ve güncelleme talimatları paylaşılır."
     }
   ]
 

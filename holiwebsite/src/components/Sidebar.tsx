@@ -36,7 +36,6 @@ const Sidebar = ({ onClose }: SidebarProps) => {
       title: 'Destek',
       items: [
         { name: 'Sık Sorulan Sorular', href: '/faq', icon: '❓' },
-        { name: 'Sorun Giderme', href: '/troubleshooting', icon: '🔧' },
         { name: 'İletişim', href: '/contact', icon: '📧' },
       ]
     }
@@ -70,10 +69,10 @@ const Sidebar = ({ onClose }: SidebarProps) => {
       {/* Header */}
       <div className="flex items-center justify-between p-6 border-b">
         <div className="flex items-center">
-          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-            H
+          <div className="w-16 h-16">
+            <img src="/holibot-logo.png" alt="Holibot" className="w-full h-full" />
           </div>
-          <span className="ml-3 text-lg font-semibold text-gray-900">
+          <span className="ml-1 text-lg font-semibold bg-gray-100 rounded-lg px-2 py-1 text-gray-900">
             Holibot
           </span>
         </div>

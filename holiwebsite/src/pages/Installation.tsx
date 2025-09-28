@@ -228,20 +228,25 @@ const Installation = () => {
           </p>
           <ol className="list-decimal list-inside space-y-2 text-gray-600">
             <li>
-              <a href="https://myaccount.google.com/security" target="_blank">
-                https://myaccount.google.com/security adresine giderek İki
-                Faktörlü Doğrulamanın açık olup olmadığını kontrol edin eğer
-                kapalıysa açın
+              <a className="text-blue-700 underline" href="https://myaccount.google.com/security" target="_blank">
+                https://myaccount.google.com/security 
               </a>
+              <span className="ml-1">adresine giderek İki
+                Faktörlü Doğrulamanın açık olup olmadığını kontrol edin eğer
+                kapalıysa açın</span>
             </li>
             <li>
+              <p>
               <a
+                className="text-blue-700 underline"
                 href="https://myaccount.google.com/apppasswords"
                 target="_blank"
               >
-                https://myaccount.google.com/apppasswords adresine girin ve
-                kendinize bir uygulama şifresi oluşturun
+                  https://myaccount.google.com/apppasswords 
               </a>
+                <span className="ml-1">adresine girin ve kendinize bir uygulama şifresi oluşturun</span>
+              </p>
+              
               <img
                 src={createAppPassword}
                 alt="Gmail Uygulama Şifresi Oluşturma"

@@ -7,7 +7,6 @@ import SMSIntegration from './pages/SMSIntegration'
 import AndroidSetup from './pages/AndroidSetup'
 import IPhoneSetup from './pages/IPhoneSetup'
 import FAQ from './pages/FAQ'
-import Troubleshooting from './pages/Troubleshooting'
 import Contact from './pages/Contact'
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
           <Route path="/android-setup" element={<AndroidSetup />} />
           <Route path="/iphone-setup" element={<IPhoneSetup />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/troubleshooting" element={<Troubleshooting />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>

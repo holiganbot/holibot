@@ -67,7 +67,7 @@ const Sidebar = ({ onClose }: SidebarProps) => {
       <div className="flex items-center justify-between p-6 border-b">
         <div className="flex items-center">
           <div className="w-16 h-16">
-            <img src="/holibot-logo.png" alt="Holibot" className="w-full h-full" />
+            <img src="/holibot/holibot-logo.png" alt="Holibot" className="w-full h-full" />
           </div>
           <span className="ml-1 text-lg font-semibold bg-gray-100 rounded-lg px-2 py-1 text-gray-900">
             Holibot

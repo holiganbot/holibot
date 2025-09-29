@@ -15,13 +15,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/features" element={<Features />} />
-          <Route path="/installation" element={<Installation />} />
-          <Route path="/sms-integration" element={<SMSIntegration />} />
-          <Route path="/android-setup" element={<AndroidSetup />} />
-          <Route path="/iphone-setup" element={<IPhoneSetup />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="features" element={<Features />} />
+          <Route path="installation" element={<Installation />} />
+          <Route path="sms-integration" element={<SMSIntegration />} />
+          <Route path="android-setup" element={<AndroidSetup />} />
+          <Route path="iphone-setup" element={<IPhoneSetup />} />
+          <Route path="faq" element={<FAQ />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </Router>

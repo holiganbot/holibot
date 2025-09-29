@@ -150,8 +150,8 @@ const Installation = () => {
             kılavuzlarından birini takip edin:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <a
-              href="/android-setup"
+            <Link
+              to="/android-setup"
               className="block p-6 bg-green-50 border border-green-200 rounded-lg hover:bg-green-100 transition-colors"
             >
               <div className="flex items-center mb-3">
@@ -163,7 +163,7 @@ const Installation = () => {
               <p className="text-green-700">
                 Android telefonlar için SMS yönlendirme kurulumu
               </p>
-            </a>
+            </Link>
             <a
               href="/iphone-setup"
               className="block p-6 bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100 transition-colors"

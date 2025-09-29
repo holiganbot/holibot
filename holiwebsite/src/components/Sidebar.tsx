@@ -48,9 +48,6 @@ const Sidebar = ({ onClose }: SidebarProps) => {
     return location.pathname === href
   }
 
-  const isParentActive = (parentPath: string) => {
-    return location.pathname === parentPath
-  }
 
   const toggleSection = (sectionTitle: string) => {
     setExpandedSections(prev =>

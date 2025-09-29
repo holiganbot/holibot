@@ -20,7 +20,7 @@ const Installation = () => {
     const hash = location.hash.replace("#", "");
     if (!hash) return;
 
-    const refs: { [key: string]: React.RefObject<HTMLElement> } = {
+    const refs: { [key: string]: React.RefObject<HTMLElement | null> } = {
       indirme: indirmeRef,
       kurulum: kurulumRef,
       baslatma: baslatmaRef,

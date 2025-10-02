@@ -1,35 +1,46 @@
+import fwios0 from '../assets/fwios/fwios-0.png'
+import fwios1 from '../assets/fwios/fwios-1.png'
+import fwios2 from '../assets/fwios/fwios-2.png'
+import fwios3 from '../assets/fwios/fwios-3.png'
+import fwios4 from '../assets/fwios/fwios-4.png'
+import fwios5 from '../assets/fwios/fwios-5.png'
+
 const IPhoneSetup = () => {
   return (
     <div className="prose prose-lg max-w-none">
       <h1 className="text-3xl font-bold text-gray-900 mb-6">iPhone SMS Kurulumu</h1>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-        <h2 className="text-xl font-semibold text-blue-900 mb-4">Shortcuts Uygulaması</h2>
-        <p className="text-blue-800 mb-4">
-          iPhone'da SMS yönlendirme yapmak için Apple'ın yerleşik <span className="font-bold">"Shortcuts"</span> uygulamasını kullanacağız.
+        <h2 className="text-xl font-semibold text-blue-900 mb-4">İki Adımda Kurulum</h2>
+        <p className="text-blue-800 mb-2">
+          iPhone'da SMS yönlendirme yapmak için iki ana adım:
         </p>
+        <ol className="list-decimal list-inside space-y-1 text-blue-800 ml-4">
+          <li className="font-semibold">Forward SMS Uygulaması Kurulumu</li>
+          <li className="font-semibold">Kestirmeler (Shortcuts) Kurulumu </li>
+        </ol>
       </div>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Shortcuts Uygulamasını Açın</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Adım 1: Forward SMS Uygulamasını İndirin</h2>
 
         <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6">
-          <div className="space-y-4">
-            <p className="text-gray-600">
-              Shortcuts uygulaması iPhone'unuzda önceden yüklenmiş olarak gelir. Eğer bulamıyorsanız App Store'dan ücretsiz indirebilirsiniz.
-            </p>
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="font-semibold text-gray-900 mb-2">App Store'dan İndirin (Gerekirse)</h3>
-                <p className="text-gray-600">Shortcuts - Apple'ın resmi uygulaması</p>
-              </div>
+          <div className="flex flex-col items-center text-center space-y-4">
+            <img
+              src={fwios0}
+              alt="Forward SMS App Store"
+              className="w-full max-w-2xl rounded-lg shadow-md"
+            />
+            <div className="w-full">
+              <h3 className="font-semibold text-gray-900 mb-2 text-lg">Forward SMS: SMS Forwarder</h3>
+              <p className="text-gray-600 mb-4">Parveen Kapoor tarafından geliştirilen ücretsiz uygulama</p>
               <a
-                href="https://apps.apple.com/us/app/shortcuts/id915249334"
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                href="https://apps.apple.com/tr/app/forward-sms-sms-forwarder/id6740165005?l=tr"
+                className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                App Store
+                App Store'dan İndir
               </a>
             </div>
           </div>
@@ -37,94 +48,128 @@ const IPhoneSetup = () => {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. SMS Yönlendirme Kısayolu Oluşturun</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Adım 2: Yeni Kural Oluşturun</h2>
 
         <div className="space-y-6">
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-            <h3 className="font-semibold text-gray-900 mb-3">Adım 1: Yeni Kısayol Oluşturun</h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>Shortcuts uygulamasını açın</li>
-              <li>Sağ üst köşedeki "+" butonuna tıklayın</li>
-              <li>"Add Action" butonuna tıklayın</li>
+            <h3 className="font-semibold text-gray-900 mb-3">Forward SMS Uygulamasını Açın</h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-600 mb-4">
+              <li>Uygulamayı ilk kez açtığınızda "No Rules Created" ekranını göreceksiniz</li>
+              <li><span className="font-semibold text-green-700">"Create Rule"</span> butonuna tıklayın</li>
+              <li>SMS yönlendirme kuralınızı oluşturmaya başlayın</li>
             </ul>
+            <img
+              src={fwios1}
+              alt="Create Rule"
+              className="w-full rounded-lg shadow-md"
+            />
           </div>
 
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-            <h3 className="font-semibold text-gray-900 mb-3">Adım 2: HTTP İsteği Ekleyin</h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>Arama çubuğuna "Get Contents of URL" yazın</li>
-              <li>Bu aksiyonu seçin</li>
-              <li>Method'u "POST" olarak değiştirin</li>
-              <li>Holibot'tan aldığınız webhook URL'sini girin</li>
+            <h3 className="font-semibold text-gray-900 mb-3">Alıcı Ekleyin</h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-600 mb-4">
+              <li>Kural adını girin (örn: "holi")</li>
+              <li><span className="font-semibold text-blue-700">"Add Receiver"</span> butonuna tıklayın</li>
+              <li>Açılan listeden <span className="font-semibold">Email</span> seçeneğini seçin</li>
+              <li>Sunucu desteği aldıysanız size verilen e-posta adresinizi veya uygulama şifresi ile oluşturdurduğunuz e-posta adresini girin</li>
             </ul>
+            <img
+              src={fwios2}
+              alt="Add Receiver"
+              className="w-full rounded-lg shadow-md"
+            />
           </div>
 
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-            <h3 className="font-semibold text-gray-900 mb-3">Adım 3: SMS İçeriği Gönderimi</h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>"Request Body" bölümünü "JSON" olarak ayarlayın</li>
-              <li>SMS içeriğini JSON formatında göndermek için gerekli kodu ekleyin</li>
-              <li>Headers'a "Content-Type: application/json" ekleyin</li>
+            <h3 className="font-semibold text-gray-900 mb-3">Filtre Ayarlarını Yapın</h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-600 mb-4">
+              <li>E-posta adresinizi girdikten sonra <span className="font-semibold text-green-700">"Apply Filter"</span> açın</li>
+              <li><span className="font-semibold">"Sender Condition"</span> bölümünden <span className="font-semibold text-blue-700">"Contains"</span> seçin</li>
+              <li>Bu sayede sadece belirli gönderici içeren SMS'ler yönlendirilir</li>
             </ul>
+            <img
+              src={fwios3}
+              alt="Filter Settings"
+              className="w-full rounded-lg shadow-md"
+            />
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+            <h3 className="font-semibold text-gray-900 mb-3">Gönderici Filtresi Ekleyin</h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-600 mb-4">
+              <li>"Sender Condition" alanına filtrelemek istediğiniz metni girin</li>
+              <li>Örnek: <span className="font-mono bg-gray-200 px-2 py-1 rounded">ONYTEK</span> (veya yönlendirmek istediğiniz gönderici adı)</li>
+              <li>Bu filtre sayesinde sadece ONYTEK içeren gönderenlerin SMS'leri yönlendirilir</li>
+            </ul>
+            <img
+              src={fwios4}
+              alt="Sender Filter"
+              className="w-full rounded-lg shadow-md"
+            />
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+            <h3 className="font-semibold text-gray-900 mb-3">Kuralı Kaydedin</h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-600 mb-4">
+              <li>Tüm ayarları yaptıktan sonra sağ üst köşedeki <span className="font-semibold text-blue-700">"Save"</span> butonuna tıklayın</li>
+              <li>Kuralınız aktif hale gelecek ve artık SMS'ler yönlendirilmeye başlayacak</li>
+              <li>İsterseniz "Send Test Message" ile test edebilirsiniz</li>
+            </ul>
+            <img
+              src={fwios5}
+              alt="Save Rule"
+              className="w-full rounded-lg shadow-md"
+            />
           </div>
         </div>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Otomatik Çalıştırma Ayarı</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Adım 3: Kestirmeler (Shortcuts) Kurulumu</h2>
 
-        <div className="space-y-6">
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-            <h3 className="font-semibold text-gray-900 mb-3">Automation Oluşturun</h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>Shortcuts uygulamasında "Automation" sekmesine gidin</li>
-              <li>"Create Personal Automation" butonuna tıklayın</li>
-              <li>"Message" trigger'ını seçin</li>
-              <li>"Received" seçeneğini işaretleyin</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-            <h3 className="font-semibold text-gray-900 mb-3">Filtre Ayarları</h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>"Sender" kısmında doğrulama SMS'i gönderen numaraları ekleyin</li>
-              <li>"Contains" filtresinde "kod", "doğrulama" gibi anahtar kelimeler ekleyin</li>
-              <li>Oluşturduğunuz kısayolu bu automation'a bağlayın</li>
-            </ul>
+        <div className="bg-orange-50 border-l-4 border-orange-500 p-5 mb-6">
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">⚠️</span>
+            <div>
+              <h3 className="font-bold text-orange-900 text-lg mb-2">Önemli: Video İzlerken Dikkat!</h3>
+              <p className="text-orange-800 mb-2">
+                Videonun <span className="font-bold">20. saniyesinde</span> <span className="font-semibold">Sender (Gönderici)</span> yazan yere mutlaka <span className="font-mono bg-orange-200 px-2 py-1 rounded font-bold">ONYTEK</span> yazın.
+              </p>
+              <p className="text-orange-700 text-sm">
+                Message Contains kısmına bir şey yazmayın ve "Run Immediately" (Anında Çalıştır) seçeneğini aktif edin.
+              </p>
+            </div>
           </div>
         </div>
-      </section>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Test ve Doğrulama</h2>
+        <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+          <h3 className="font-semibold text-gray-900 mb-3">Video Rehber</h3>
+          <p className="text-gray-600 mb-4">
+            Aşağıdaki videoyu izleyerek Shortcuts (Kestirmeler) uygulamasında SMS yönlendirme otomasyonu kurabilirsiniz:
+          </p>
 
-        <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-          <h3 className="font-semibold text-green-900 mb-3">Kurulumu Test Edin</h3>
-          <ol className="list-decimal list-inside space-y-2 text-green-800">
-            <li>Holibot'u başlatın</li>
-            <li>Test bir doğrulama SMS'i alın</li>
-            <li>SMS'in otomatik olarak yönlendirildiğini kontrol edin</li>
-            <li>Gerekirse filtre ayarlarını düzenleyin</li>
-          </ol>
+          <div className="aspect-w-9 aspect-h-16 mb-4">
+            <iframe
+              src="https://www.youtube.com/embed/CBLdzNcNBaU"
+              title="iPhone Shortcuts SMS Yönlendirme Kurulumu"
+              className="w-full h-96 rounded-lg shadow-md"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         </div>
       </section>
 
       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
         <h3 className="font-semibold text-yellow-900 mb-3">⚠️ Önemli Notlar</h3>
         <ul className="list-disc list-inside space-y-2 text-yellow-800">
-          <li>iOS sürümünüzün Shortcuts automation'ları desteklediğinden emin olun (iOS 13+)</li>
-          <li>Automation'ların çalışması için "Ask Before Running" seçeneğini kapatın</li>
-          <li>Gizlilik ayarlarından Shortcuts'un gerekli izinlere sahip olduğunu kontrol edin</li>
-          <li>Sadece güvenilir kaynaklardan gelen SMS'leri yönlendirin</li>
+          <li>Uygulamanın bildirim izinlerini açık tutun</li>
+          <li>Filtreleri doğru ayarladığınızdan emin olun</li>
+          <li>Yönlendirme yapmadan önce test mesajı gönderin</li>
         </ul>
       </div>
 
-      <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-        <h3 className="font-semibold text-red-900 mb-3">🔒 Güvenlik Uyarısı</h3>
-        <p className="text-red-800">
-          SMS yönlendirme hassas bilgiler içerebilir. Webhook URL'nizi güvenli tutun ve sadece güvendiğiniz servislere yönlendirme yapın.
-        </p>
-      </div>
+
     </div>
   )
 }

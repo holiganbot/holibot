@@ -1,35 +1,46 @@
-import Step from '../components/Step'
-import fwsms0 from '../assets/fwsms/fwsms-0.png'
-import fwsms1 from '../assets/fwsms/fwsms-1.jpg'
-import fwsms2 from '../assets/fwsms/fwsms-2.jpg'
-import fwsms3 from '../assets/fwsms/fwsms-3.jpg'
-import fwsms4 from '../assets/fwsms/fwsms-4.jpg'
-import fwsms5 from '../assets/fwsms/fwsms-5.jpg'
-import fwsms6 from '../assets/fwsms/fwsms-6.jpg'
-import fwsms7 from '../assets/fwsms/fwsms-7.jpg'
-import fwsms8 from '../assets/fwsms/fwsms-8.jpg'
-import fwsms9 from '../assets/fwsms/fwsms-9.jpg'
-import fwsms11 from '../assets/fwsms/fwsms-11.jpg'
-import fwsms12 from '../assets/fwsms/fwsms-12.jpg'
-import fwsms13 from '../assets/fwsms/fwsms-13.jpg'
-import fwsms14 from '../assets/fwsms/fwsms-14.jpg'
-import fwsms15 from '../assets/fwsms/fwsms-15.jpg'
-import fwsms16 from '../assets/fwsms/fwsms-16.jpg'
-import fwsms17 from '../assets/fwsms/fwsms-17.jpg'
+import Step from "../components/Step";
+import fwsms0 from "../assets/fwsms/fwsms-0.png";
+import fwsms1 from "../assets/fwsms/fwsms-1.jpg";
+import fwsms2 from "../assets/fwsms/fwsms-2.jpg";
+import fwsms3 from "../assets/fwsms/fwsms-3.jpg";
+import fwsms4 from "../assets/fwsms/fwsms-4.jpg";
+import fwsms5 from "../assets/fwsms/fwsms-5.jpg";
+import fwsms6 from "../assets/fwsms/fwsms-6.jpg";
+import fwsms7 from "../assets/fwsms/fwsms-7.jpg";
+import fwsms8 from "../assets/fwsms/fwsms-8.jpg";
+import fwsms9 from "../assets/fwsms/fwsms-9.jpg";
+import fwsms11 from "../assets/fwsms/fwsms-11.jpg";
+import fwsms12 from "../assets/fwsms/fwsms-12.jpg";
+import fwsms13 from "../assets/fwsms/fwsms-13.jpg";
+import fwsms14 from "../assets/fwsms/fwsms-14.jpg";
+import fwsms15 from "../assets/fwsms/fwsms-15.jpg";
+import fwsms16 from "../assets/fwsms/fwsms-16.jpg";
+import fwsms17 from "../assets/fwsms/fwsms-17.jpg";
+import fwsmsVideo from "../assets/fwsms/fwsms.mp4";
 const AndroidSetup = () => {
   return (
     <div className="prose prose-lg max-w-none">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Android SMS Kurulumu</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-6">
+        Android SMS Kurulumu
+      </h1>
 
       <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
-        <h2 className="text-xl font-semibold text-green-900 mb-4">Gerekli Uygulama</h2>
+        <h2 className="text-xl font-semibold text-green-900 mb-4">
+          Gerekli Uygulama
+        </h2>
         <p className="text-green-800 mb-4">
-          Android telefonunuzda SMS yönlendirme yapmak için <span className="font-bold">"Forward SMS"</span> uygulamasını kurmanız gerekiyor.
+          Android telefonunuzda SMS yönlendirme yapmak için{" "}
+          <span className="font-bold">"Forward SMS"</span> uygulamasını kurmanız
+          gerekiyor.
         </p>
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2">Google Play Store'dan İndirin</h3>
-            <p className="text-gray-600">Forward SMS uygulamasını resmi mağazadan indirin</p>
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Google Play Store'dan İndirin
+            </h3>
+            <p className="text-gray-600">
+              Forward SMS uygulamasını resmi mağazadan indirin
+            </p>
           </div>
           <a
             href="https://play.google.com/store/apps/details?id=com.development.forwardsms&hl=en"
@@ -44,24 +55,34 @@ const AndroidSetup = () => {
       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
         <h3 className="font-semibold text-yellow-900 mb-3">⚠️ Önemli Notlar</h3>
         <ul className="list-disc list-inside space-y-2 text-yellow-800">
-        <li>Uygulamanın çalışması için internet olması zorunludur. İnternet açık olmadığı durumda bot SMS kodu alamayacağı için hesabınıza giriş yapamaz.</li>
-          <li>Telefonunuz uyku modundayken de çalışması için anlatılan tüm ayarları eksiksiz yapın</li>
+          <li>
+            Uygulamanın çalışması için internet olması zorunludur. İnternet açık
+            olmadığı durumda bot SMS kodu alamayacağı için hesabınıza giriş
+            yapamaz.
+          </li>
+          <li>
+            Telefonunuz uyku modundayken de çalışması için anlatılan tüm
+            ayarları eksiksiz yapın
+          </li>
         </ul>
       </div>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Videolu Anlatım</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          Videolu Anlatım
+        </h2>
         <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
           <p className="text-gray-600 mb-4">
-            Aşağıdaki videoda Forward SMS kurulumunun tüm adımlarını detaylı olarak görebilirsiniz:
+            Aşağıdaki videoda Forward SMS kurulumunun tüm adımlarını detaylı
+            olarak görebilirsiniz:
           </p>
-          <div className="relative w-full" style={{paddingBottom: '56.25%'}}>
+          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
             <video
               className="absolute top-0 left-0 w-full h-full rounded-lg border border-gray-300"
               controls
               preload="metadata"
             >
-              <source src="/media/fwsms.mp4" type="video/mp4" />
+              <source src={fwsmsVideo} type="video/mp4" />
               Tarayıcınız video oynatmayı desteklemiyor.
             </video>
           </div>
@@ -69,7 +90,9 @@ const AndroidSetup = () => {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Forward SMS Kurulum Adımları</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          Forward SMS Kurulum Adımları
+        </h2>
 
         <Step
           stepNumber={0}
@@ -101,12 +124,14 @@ const AndroidSetup = () => {
               />
             </svg>
             <div className="text-yellow-900 text-sm">
-              Uygulamayı açtıktan sonra karşınıza çıkan <b>tüm izinleri vermeniz gerekmektedir</b>. Aksi halde SMS yönlendirme düzgün çalışmaz.
+              Uygulamayı açtıktan sonra karşınıza çıkan{" "}
+              <b>tüm izinleri vermeniz gerekmektedir</b>. Aksi halde SMS
+              yönlendirme düzgün çalışmaz.
             </div>
           </div>
         </Step>
 
-<Step
+        <Step
           stepNumber={1}
           title="Kural oluşturma"
           description="Uygulamada izinleri verdikten sonra sağ altta bulunan 'Add Rule' butonuna tıklayın."
@@ -138,7 +163,8 @@ const AndroidSetup = () => {
           imageAlt="Email ayarları"
         >
           <p className="text-gray-600 mb-4">
-            - Daha sonra "Forward All Messages" yazısının sağındaki kutucuğa tıklayarak pasifize edin.
+            - Daha sonra "Forward All Messages" yazısının sağındaki kutucuğa
+            tıklayarak pasifize edin.
           </p>
         </Step>
 
@@ -149,10 +175,11 @@ const AndroidSetup = () => {
           imageSrc={fwsms9}
           imageAlt="Filtre ayarları"
         >
-          <p className="text-gray-600 mb-4">- Daha sonra "Save" butonuna tıklayın.</p>
+          <p className="text-gray-600 mb-4">
+            - Daha sonra "Save" butonuna tıklayın.
+          </p>
         </Step>
 
-        
         <Step
           stepNumber={6}
           title="Test etme"
@@ -160,7 +187,6 @@ const AndroidSetup = () => {
           imageSrc={fwsms12}
           imageAlt="Test etme"
         />
-        
 
         <Step
           stepNumber={7}
@@ -194,8 +220,6 @@ const AndroidSetup = () => {
           imageAlt="Pil Optimizasyonu Kısıtlamalarını Kapatma 4"
         />
 
-        
-
         <Step
           stepNumber={11}
           title="Arka Planda Otomatik Çalıştırma Ayarı"
@@ -228,7 +252,7 @@ const AndroidSetup = () => {
           imageAlt="Arka Planda Otomatik Çalıştırma Ayarı 4"
         />
 
-<Step
+        <Step
           stepNumber={15}
           title="(Opsiyonel) Premium seçeneği"
           description="Ücretsiz sürümde günlük 50 adet SMS yönlendirme limiti bulunmaktadır. Bu limiti aşarsanız SMS yönlendirme yapamazsınız ve bot çalışmaz hale gelebilir. Premium seçeneği ile bu durumu garantiye alabilirsiniz. Bunun için uygulamayı açın ve sol üstteki 'Ayarlar' ikonuna tıklayın."
@@ -243,12 +267,9 @@ const AndroidSetup = () => {
           imageSrc={fwsms13}
           imageAlt="(Opsiyonel) Premium seçeneği"
         />
-
       </section>
-
-      
     </div>
-  )
-}
+  );
+};
 
-export default AndroidSetup
+export default AndroidSetup;
